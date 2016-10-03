@@ -32,6 +32,11 @@ end
 
 # -- default rules -----------------------------------------------------------
 
+compile '/**/*.haml' do
+  filter :haml
+  layout '/default.*'
+end
+
 compile '/**/*.html' do
   layout '/default.*'
 end
@@ -45,7 +50,7 @@ compile '/**/*' do
   write item.identifier.to_s
 end
 
-route '/**/*.{html,md}' do
+route '/**/*.{haml,html,md}' do
   if item.identifier =~ '/index.*'
     '/index.html'
   else
