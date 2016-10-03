@@ -1,5 +1,8 @@
+// Font Awesome
+@import "font-awesome";
+
 // Foundation
 @import "foundation";
 
-// Font Awesome
-@import "font-awesome";
+// Enable Flexbox
+@include foundation-everything(true);

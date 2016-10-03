@@ -4,11 +4,10 @@
     %meta(charset="utf-8")
     %meta(http-equiv="x-ua-compatible" content="ie-edge")
     %meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    %meta(content="Nanoc #{Nanoc::VERSION}" name="generator")
+    %meta(name="generator" content="Nanoc #{Nanoc::VERSION}")
     %title
-      A Brand New Nanoc Site - #{@item[:title]}
+      VAST - #{@item[:title]}
     %link(rel="stylesheet" href="/css/main.css" )
   %body
-    #main
-      ~ yield
+    ~ yield
     %script(src="/js/all.js")

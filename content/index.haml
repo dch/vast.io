@@ -1,0 +1,33 @@
+---
+title: Home
+---
+
+.top-bar
+  .top-bar-title
+    %span(data-responsive-toggle="responsive-menu" data-hide-for="medium")
+      %button.menu-icon.dark(type="button" data-toggle)
+    %strong
+      VAST
+  .top-bar-left
+    %ul.dropdown.menu(data-dropdown-menu)
+      %li
+        %a(href="#") Home
+      %li
+        %a(href="#") Features
+      %li
+        %a(href="#") Resources
+        %ul.menu.vertical
+          %li
+            %a(href="#") Download
+          %li
+            %a(href="#") Documentation
+          %li
+            %a(href="#") Community
+      %li
+        %a(href="#") Contact
+  .top-bar-right
+    %ul.menu
+      %li
+        %input(type="search" placeholder="Search")
+      %li
+        %button.button(type="button") Search
