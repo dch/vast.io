@@ -1,63 +1,63 @@
-require 'compass'
-Compass.add_project_configuration('compass_config.rb')
+require "compass"
+Compass.add_project_configuration("compass_config.rb")
 
 # -- components --------------------------------------------------------------
 
 # Font Awesome
-route '/assets/components/fontawesome/fonts/**/*' do
-  '/fonts/' + File.basename(item.identifier.to_s)
+route "/assets/components/fontawesome/fonts/**/*" do
+  "/fonts/" + File.basename(item.identifier.to_s)
 end
 
 # Ignore everything not mentioned so far.
-ignore '/assets/components/**/*'
+ignore "/assets/components/**/*"
 
 # -- JavsScript --------------------------------------------------------------
 
 # Aggregated JavaScript.
-compile '/assets/scripts/*.js.haml' do
+compile "/assets/scripts/*.js.haml" do
   filter :haml
-  write '/js/' + File.basename(item.identifier.without_ext)
+  write "/js/" + File.basename(item.identifier.without_ext)
 end
 
 # -- stylesheets -------------------------------------------------------------
 
 # Ignore SCSS sources.
-ignore '/assets/stylesheets/**/_*'
+ignore "/assets/stylesheets/**/_*"
 
 # SCSS.
-compile '/assets/stylesheets/**/*' do
+compile "/assets/stylesheets/**/*" do
   filter :sass, Compass.sass_engine_options
-  write '/css/' + File.basename(item.identifier.without_ext + '.css')
+  write "/css/" + File.basename(item.identifier.without_ext + ".css")
 end
 
 # -- default rules -----------------------------------------------------------
 
-compile '/**/*.haml' do
+compile "/**/*.haml" do
   filter :haml
-  layout '/default.*'
+  layout "/default.*"
 end
 
-compile '/**/*.html' do
-  layout '/default.*'
+compile "/**/*.html" do
+  layout "/default.*"
 end
 
-compile '/**/*.md' do
+compile "/**/*.md" do
   filter :kramdown
-  layout '/default.*'
+  layout "/default.*"
 end
 
-compile '/**/*' do
+compile "/**/*" do
   write item.identifier.to_s
 end
 
-route '/**/*.{haml,html,md}' do
-  if item.identifier =~ '/index.*'
-    '/index.html'
+route "/**/*.{haml,html,md}" do
+  if item.identifier =~ "/index.*"
+    "/index.html"
   else
-    item.identifier.without_ext + '/index.html'
+    item.identifier.without_ext + "/index.html"
   end
 end
 
 # -- layouts -----------------------------------------------------------------
 
-layout '/**/*', :haml
+layout "/**/*", :haml
