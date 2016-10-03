@@ -1,10 +1,62 @@
-## Usage
+# vast.io
 
-Install missing dependencies:
+This repository hosts the source code for <http://vast.io>.
+
+# Architecture
+
+This site uses the static-site generator [nanoc](http://nanoc.ws) to drive the
+preprocessing and compilation of the various frameworks unified in this
+project:
+
+1. [Bundler](http://bundler.io) manages the Ruby dependencies, listed in
+   [Gemfile](Gemfile).
+
+2. [Bower](https://bower.io) to manage the various web frameworks. Examples
+   include [Foundation](http://foundation.zurb.com) and
+   [Font Awesome](http://fontawesome.io). The file [bower.json](bower.json)
+   configures all used packages in this project.
+
+2. [Compass](http://compass-style.org) as CSS/SASS framework. In the
+   configuration file [compass_config.rb](compass_config.rb), one can import
+   SCSS from the various frameworks bower installed in
+   `content/assets/components`.
+
+3. We use [HAML](http://haml.info) to write clean and consice HTML markup.
+
+The repository layout
+```
+  .
+  |----content/               The site content
+  |----|----assets/           Resources
+  |----|----|----components   Bower packages
+  |----|----|----scripts      JavaScript scripts
+  |----|----|----stylesheets  (S)CSS
+  |----layouts/               Site layouts written in HAML
+  |----lib/                   Additional Ruby code for use in layouts
+  |----bower.json             Bower package manager configuration
+  |----compass_config.rb      SASS configuration
+  |----nanoc.yaml             Nanoc configuration
+  |----Rules                  Nanoc compilation rules
+
+```
+
+The [Rules](Rules) file describes the compilation process in detail.
+
+# Usage
+
+You need Ruby >= 2.3 to compile the site. Make sure you have bundler and bower
+installed:
+
+    gem install bundler
+    npm -g install bower
+
+Thereafter, configure the project by installing potentially missing
+dependencies:
 
     bundle install
+    bower install
 
-Compile the site:
+You're set. Now compile the site as follows:
 
     bundle exec nanoc
 
@@ -12,7 +64,18 @@ Serve the compiled site at http://localhost:3000:
 
     bundle exec nanoc view
 
-Automatically recompile the site upon filesystem writes to files that may
-change the output:
+To make the edit-compile-view cycle more efficient, you can also use
+[Guard](https://github.com/guard/guard) to watch filesystem changes and
+automatically recompile the site:
 
     bundle exec guard
+
+# Deploying
+
+After compiling and visuall inspecting the changes, perform the unit tests:
+
+    bundle exec nanoc check --all
+
+Thereafter, deploy the site as follows:
+
+    TODO
