@@ -1,3 +1,4 @@
+*.sw?
 crash.log
 output/
 tmp/
