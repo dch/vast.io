@@ -27,7 +27,7 @@ DEPENDENCIES
   adsf
   haml
   kramdown
-  nanoc
+  nanoc (~> 4.0)
 
 BUNDLED WITH
    1.11.2
