@@ -1,3 +1,5 @@
+# -- nanoc configuration --------------------------------------------------------
+
 # The syntax to use for patterns in the Rules file. Can be either `"glob"`
 # (default) or `"legacy"`. The former will enable glob patterns, which behave
 # like Ruby’s File.fnmatch. The latter will enable Nanoc 3.x-style patterns.
@@ -88,3 +90,30 @@ checks:
     # E.g.:
     #   exclude_files: ['blog/page']
     exclude_files: []
+
+
+# -- site meta data -------------------------------------------------------------
+
+site:
+  name: VAST
+  slogan: Visibility Across Space and Time
+  author: Matthias Vallentin
+
+  email:
+    list: http://mailman.icsi.berkeley.edu/mailman/listinfo/vast
+    commits: http://mailman.icsi.berkeley.edu/mailman/listinfo/vast-commits
+    info: info@vast.io
+
+  docs:
+    paper: http://matthias.vallentin.net/papers/nsdi16.pdf
+    thesis: http://matthias.vallentin.net/papers/thesis-phd.pdf
+
+  github:
+    organization: https://github.com/vast-io
+    project: https://github.com/vast-io/vast
+
+  twitter: https://twitter.com/vast_io
+
+  chat:
+    vast: https://gitter.im/vast-io/vast
+    cpp: https://gitter.im/vast-io/cpp

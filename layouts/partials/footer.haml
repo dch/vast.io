@@ -1,0 +1,18 @@
+%hr
+.row
+  .columns.text-center
+    %p
+      %i.fa.fa-copyright
+      = Date.today.year
+      = @config[:site][:author]
+.row
+  .columns.text-center
+    %p
+      %a(href="#{@config[:site][:chat][:vast]}")
+        %i.fa.fa-commenting
+      %a(href="#{@config[:site][:github][:organization]}")
+        %i.fa.fa-github
+      %a(href="#{@config[:site][:twitter]}")
+        %i.fa.fa-twitter
+      %a(href="mailto:#{@config[:site][:email][:info]}")
+        %i.fa.fa-envelope

@@ -1,0 +1,38 @@
+%nav
+  .title-bar(data-responsive-toggle="main-menu" data-hide-for="medium")
+    %button.menu-icon(type="button" data-toggle)
+    .title-bar-title
+      Menu
+  .top-bar#main-menu
+    .top-bar-title
+      %img(src="images/logo.png" alt="Logo")
+    .top-bar-left
+      %ul.dropdown.menu(data-dropdown-menu)
+        %li
+          %a(href="#") Home
+        %li
+          %a(href="#features") Features
+        %li
+          %a(href="#resources") Resources
+          %ul.menu.vertical
+            %li
+              %a(href="#download") 
+                %i.fa.fa-download
+                Download
+            %li
+              %a(href="#documentation") 
+                %i.fa.fa-book
+                Documentation
+            %li
+              %a(href="#community") 
+                %i.fa.fa-users
+                Community
+        %li
+          %a(href="#about") About
+    .top-bar-right
+      %ul.menu.align-right
+        %li
+          %input(type="search" placeholder="Search")
+        %li
+          %button.button(type="button")
+            %i.fa.fa-search

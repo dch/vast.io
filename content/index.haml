@@ -2,32 +2,228 @@
 title: Home
 ---
 
-.top-bar
-  .top-bar-title
-    %span(data-responsive-toggle="responsive-menu" data-hide-for="medium")
-      %button.menu-icon.dark(type="button" data-toggle)
-    %strong
-      VAST
-  .top-bar-left
-    %ul.dropdown.menu(data-dropdown-menu)
-      %li
-        %a(href="#") Home
-      %li
-        %a(href="#") Features
-      %li
-        %a(href="#") Resources
-        %ul.menu.vertical
-          %li
-            %a(href="#") Download
-          %li
-            %a(href="#") Documentation
-          %li
-            %a(href="#") Community
-      %li
-        %a(href="#") Contact
-  .top-bar-right
-    %ul.menu
-      %li
-        %input(type="search" placeholder="Search")
-      %li
-        %button.button(type="button") Search
+%header
+  = render '/partials/topbar.*'
+%main(role="main")
+  %section#spotlight
+    .row
+      .columns.text-center
+        %h2.subheader A Scalable Platform for Network Forensics
+    .row.align-center
+      .columns.medium-8
+        .orbit(role="showcase" aria-label="VAST Highlights" data-orbit)
+          %ul.orbit-container
+            %button.orbit-previous
+              %span.show-for-sr Previous Slide
+              &#9664;&#xFE0E;
+            %button.orbit-next
+              %span.show-for-sr Next Slide
+              &#9654;&#xFE0E;
+            %li.orbit-slide.is-active
+              %img.orbit-image(src="images/visibility.jpg")
+              %figcaption.orbit-caption
+                Visibility...
+            %li.orbit-slide
+              %img.orbit-image(src="images/across.jpg")
+              %figcaption.orbit-caption
+                \...Across...
+            %li.orbit-slide
+              %img.orbit-image(src="images/space.jpg")
+              %figcaption.orbit-caption
+                \...Space...
+            %li.orbit-slide
+              %img.orbit-image(src="images/time.jpg")
+              %figcaption.orbit-caption
+                \...and Time
+          %nav.orbit-bullets
+            %button.is-active(data-slide="0")
+              %span.show-for-sr
+                First slide details.
+              %span.show-for-sr
+                Current slide
+            %button(data-slide="1")
+              %span.show-for-sr
+                Second slide details.
+            %button(data-slide="2")
+              %span.show-for-sr
+                Third slide details.
+            %button(data-slide="3")
+              %span.show-for-sr
+                Third slide details.
+  %section#features
+    .row
+      .columns.text-center
+        %h1 Features
+    .row(data-equalizer data-equalize-on="medium")
+      .medium4.columns
+        .callout.large.primary(data-equalizer-watch)
+          .text-center
+            %i.fa.fa-magic.fa-4x
+          :markdown
+            **Interactive**. VAST is designed to answer complex queries in
+            sub-second latencies, allowing incident responders and threat
+            hunters to quickly achieve their tasks with maximum productivity.
+      .medium4.columns
+        .callout.large.primary(data-equalizer-watch)
+          .text-center
+            %i.fa.fa-cubes.fa-4x
+          :markdown
+            **Scalable**. VAST harnesses all available CPU cores in your
+            machine and transparently scales to cluster of commodity machines.
+            To this end, VAST leverages the [C++ Actor
+            Framework](http://www.actor-framework.org) as high-performance
+            runtime.
+      .medium4.columns
+        .callout.large.primary(data-equalizer-watch)
+          .text-center
+            %i.fa.fa-terminal.fa-4x
+          :markdown
+            **Expressive**. VAST offers a rich type system to describe
+            your data, giving you flexible query operations (e.g., IP address
+            prefix search, set membership) and unleashing type-specific
+            internal optimizations.
+  %hr
+  %section#resources
+    .row
+      .columns.text-center
+        %h1 Resources
+    / Download
+    .row.align-middle#download
+      .columns.text-center
+        %i.fa.fa-download.fa-5x
+      .columns.medium-8
+        .callout.large.secondary
+          %h3 Download
+          %p
+            Unfortunately we don't have an official release yet, but we are
+            scrambling hard to provide an alpha version soon. Stay tuned!
+    / Documentation
+    .row.align-middle#documentation
+      .columns.text-center
+        %i.fa.fa-book.fa-5x
+      .columns.medium-8
+        .callout.large.secondary
+          %h3 Documentation
+          :markdown
+            Since VAST is still in a fledgling stage, we do not have technical
+            documentation available at this point. Meanwhile, our [conference
+            paper](#{@config[:site][:docs][:paper]}) offers a good introduction
+            and the corresponding
+            [dissertation](#{@config[:site][:docs][:thesis]}) comprehensive
+            coverage about the design and implementation.
+    / Community
+    .row.align-middle#community
+      .columns.text-center
+        %i.fa.fa-users.fa-5x
+      .columns.medium-8
+        .callout.large.secondary
+          %h3 Community
+          :markdown
+            While we are developing VAST, we want to stay in touch with you and
+            seek an active exchange. After all, *you* will be using it and we
+            are working hard to deliver you a satisfying solution.
+            These are the various channels to reach us:
+          / Chat
+          .row
+            .columns.text-center
+              %a(href="#{@config[:site][:chat][:vast]}")
+                %i.fa.fa-commenting.fa-3x
+            .columns.medium-10
+              :markdown
+                **Chat**. We listen. If you have direct questions for the
+                developers of VAST, join our [Gitter
+                chat](#{@config[:site][:chat][:vast]}). As die-hard C++ fans,
+                we also have dedicated [C++
+                channel](#{@config[:site][:chat][:cpp]}).
+          / GitHub
+          .row
+            .columns.text-center
+              %a(href="#{@config[:site][:github][:project]}")
+                %i.fa.fa-github.fa-3x
+            .columns.medium-10
+              :markdown
+                **GitHub**. We share our work. VAST ships with a permissive
+                3-clause BSD license. If you have trouble with the code, please
+                do not hesitate to file an issue at [our
+                tracker](#{@config[:site][:github][:project]}/issues).
+          / Twitter
+          .row
+            .columns.text-center
+              %a(href="#{@config[:site][:twitter]}")
+                %i.fa.fa-twitter.fa-3x
+            .columns.medium-10
+              :markdown
+                **Twitter**. We spread the word. Follow
+                [@vast_io](#{@config[:site][:twitter]}) where we will
+                periodically post noteworthy tidbits about VAST.
+          / Mailing lists
+          .row
+            .columns.text-center
+              %a(href="#{@config[:site][:email][:list]}")
+                %i.fa.fa-envelope.fa-3x
+            .columns.medium-10
+              :markdown
+                **Mailing Lists**. We listen to you.  To reach the community,
+                send an email to our [mailing
+                list]([#{@config[:site][:email][:list]}). Our commit diffs ship
+                to a [separate mailing
+                list](#{@config[:site][:email][:commits]}). And if you can't
+                find answer anywhere, you can always send an email to
+                <#{@config[:site][:email][:info]}>.
+  %hr
+  %section#about
+    .row
+      .columns.text-center
+        %h1 About
+    / Academic Origin
+    .row.align-middle
+      .columns.medium-8
+        .callout.large.success
+          %h3 Academic Origin
+          :markdown
+            The abstract idea of VAST manifested in 2008 as a [research
+            paper](http://www.icir.org/mallman/pubs/AKP+08/AKP+08.pdf) about
+            **Principles for Developing Comprehensive Network Visibility** by
+            [Mark Allman](http://www.icir.org/mallman) (who coined the term
+            VAST),
+            [Christian Kreibich](http://www.icir.org/christian),
+            [Vern Paxson](http://www.icir.org/vern),
+            [Robin Sommer](http://www.icir.org/robin), and
+            [Nicholas Weaver](http://www.icsi.berkeley.edu/~nweaver).
+      .columns.text-center
+        %i.fa.fa-graduation-cap.fa-5x
+    / Funding
+    .row.align-middle
+      .columns.medium-8
+        .callout.large.success
+          %h3 Funding
+          :markdown
+            The [Signatures Innovation Fellows
+            Program](http://vcresearch.berkeley.edu/signatures/about) currently
+            funds VAST development and research. This program supports
+            innovative research from UC Berkeley faculty that hold commercial
+            promise. We are grateful for their support.
+      .columns.text-center
+        %i.fa.fa-usd.fa-5x
+    / Academic Origin
+    .row.align-middle
+      .columns.medium-8
+        .callout.large.success
+          %h3 Scientific Use
+          :markdown
+            If you want to cite VAST in an academic context, please cite our
+            [conference paper](#{@config[:site][:docs][:paper]}) as follows:
+          %pre
+            :preserve
+              @InProceedings{nsdi16:vast,
+                author    = {Matthias Vallentin and Vern Paxson and Robin Sommer},
+                title     = {{VAST: A Unified Platform for Interactive Network Forensics}},
+                booktitle = {Proceedings of the USENIX Symposium on Networked Systems
+                             Design and Implementation (NSDI)},
+                month     = {March},
+                year      = {2016}
+              }
+      .columns.text-center
+        %i.fa.fa-retweet.fa-5x
+%footer
+  = render '/partials/footer.*'
