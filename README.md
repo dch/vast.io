@@ -71,6 +71,9 @@ automatically recompile the site:
 
     bundle exec guard
 
+If you're tired of manually hitting reload in the browser, just install the
+[LiveReload](http://livereload.com/extensions) extension.
+
 # Deploying
 
 After compiling and visually inspecting the changes, perform the unit tests:

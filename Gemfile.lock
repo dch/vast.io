@@ -21,6 +21,10 @@ GEM
     concurrent-ruby (1.0.2)
     cri (2.7.0)
       colored (~> 1.2)
+    em-websocket (0.5.1)
+      eventmachine (>= 0.12.9)
+      http_parser.rb (~> 0.6.0)
+    eventmachine (1.2.0.1)
     ffi (1.9.14)
     formatador (0.2.5)
     guard (2.14.0)
@@ -37,6 +41,11 @@ GEM
       guard (~> 2.2)
       guard-compat (~> 1.1)
     guard-compat (1.2.1)
+    guard-livereload (2.5.2)
+      em-websocket (~> 0.5)
+      guard (~> 2.8)
+      guard-compat (~> 1.0)
+      multi_json (~> 1.8)
     guard-nanoc (2.1.0)
       guard (~> 2.8)
       guard-compat (~> 1.0)
@@ -45,6 +54,7 @@ GEM
       tilt
     hamster (3.0.0)
       concurrent-ruby (~> 1.0)
+    http_parser.rb (0.6.0)
     json (2.0.2)
     kramdown (1.12.0)
     listen (3.1.5)
@@ -91,6 +101,7 @@ DEPENDENCIES
   adsf
   compass
   guard-bundler
+  guard-livereload
   guard-nanoc
   haml
   kramdown

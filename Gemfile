@@ -5,6 +5,7 @@ gem "adsf"
 gem "compass"
 gem 'guard-nanoc'
 gem 'guard-bundler'
+gem 'guard-livereload'
 gem "haml"
 gem "kramdown"
 gem "nanoc", "~> 4.3"
