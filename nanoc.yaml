@@ -92,6 +92,14 @@ checks:
     exclude_files: []
 
 
+# -- deploying ------------------------------------------------------------------
+
+deploy:
+  default:
+    kind: git
+    remote: git@github.com:mavam/vast.io.git
+    branch: gh-pages
+
 # -- site meta data -------------------------------------------------------------
 
 site:
