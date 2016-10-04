@@ -3,6 +3,6 @@
 
 // Foundation
 @import "foundation";
+@import "motion-ui";
 
-// Enable Flexbox
-@include foundation-everything(true);
+@include foundation-everything($flex: true);

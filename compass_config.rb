@@ -3,6 +3,7 @@ require 'compass/import-once/activate'
 # Add import paths to bower packages here.
 add_import_path "content/assets/components/foundation-sites/scss"
 add_import_path "content/assets/components/fontawesome/scss"
+add_import_path "content/assets/components/motion-ui"
 
 http_path             = "/"
 project_path          = File.expand_path(File.dirname(__FILE__))

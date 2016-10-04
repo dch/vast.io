@@ -1,6 +1,3 @@
-require "compass"
-Compass.add_project_configuration("compass_config.rb")
-
 # -- components --------------------------------------------------------------
 
 # Font Awesome
@@ -11,7 +8,17 @@ end
 # Ignore everything not mentioned so far.
 ignore "/assets/components/**/*"
 
-# -- JavsScript --------------------------------------------------------------
+# -- images ------------------------------------------------------------------
+
+route "/assets/images/favicon.*" do
+  "/" + File.basename(item.identifier.to_s)
+end
+
+route "/assets/images/**/*" do
+  "/images/" + File.basename(item.identifier.to_s)
+end
+
+# -- JavaScript --------------------------------------------------------------
 
 # Aggregated JavaScript.
 compile "/assets/scripts/*.js.haml" do
@@ -47,7 +54,6 @@ compile "/**/*.md" do
 end
 
 compile "/**/*" do
-  write item.identifier.to_s
 end
 
 route "/**/*.{haml,html,md}" do
