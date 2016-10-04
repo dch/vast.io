@@ -90,4 +90,7 @@ repository in the `output` directory in branch `gh-pages`:
     git checkout -f gh-pages # force overwrite to get current state
 
 Thereafter, re-build the site to get the most recent version in the `output`
-directory` and push the branch upstream.
+directory` and push the branch upstream. The first time doing so, you need to
+set the remote upstream:
+
+    git push --set-upstream origin gh-pages
