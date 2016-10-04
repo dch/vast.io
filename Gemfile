@@ -9,6 +9,7 @@ gem 'guard-livereload'
 gem "haml"
 gem "kramdown"
 gem "nanoc", "~> 4.3"
-gem "nanoc-git"
+gem "nanoc-git"         # nanoc deploy
 gem "nokogiri"          # nanoc check
+gem "uglifier"          # :uglify_js filter
 gem "w3c_validators"    # nanoc check

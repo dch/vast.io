@@ -23,6 +23,7 @@ end
 # Aggregated JavaScript.
 compile "/assets/scripts/*.js.haml" do
   filter :haml
+  filter :uglify_js
   write "/js/" + File.basename(item.identifier.without_ext)
 end
 
