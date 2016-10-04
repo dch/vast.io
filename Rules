@@ -37,6 +37,10 @@ compile "/assets/stylesheets/**/*" do
   write "/css/" + File.basename(item.identifier.without_ext + ".css")
 end
 
+# -- copy as-is --------------------------------------------------------------
+
+passthrough '/CNAME'
+
 # -- default rules -----------------------------------------------------------
 
 compile "/**/*.haml" do
