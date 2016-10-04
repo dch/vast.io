@@ -29,6 +29,7 @@ The repository layout
   |----content/               The site content
   |----|----assets/           Resources
   |----|----|----components   Bower packages
+  |----|----|----images       Images
   |----|----|----scripts      JavaScript scripts
   |----|----|----stylesheets  (S)CSS
   |----layouts/               Site layouts written in HAML
@@ -72,10 +73,8 @@ automatically recompile the site:
 
 # Deploying
 
-After compiling and visuall inspecting the changes, perform the unit tests:
+After compiling and visually inspecting the changes, perform the unit tests:
 
     bundle exec nanoc check --all
 
-Thereafter, deploy the site as follows:
-
-    TODO
+Thereafter, deploy the site by pushing the master branch upstream.
