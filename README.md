@@ -80,4 +80,14 @@ After compiling and visually inspecting the changes, perform the unit tests:
 
     bundle exec nanoc check --all
 
-Thereafter, deploy the site by pushing the master branch upstream.
+In order to push the new site upstream, you need to setup this very git
+repository in the `output` directory in branch `gh-pages`:
+
+    cd output
+    git init .
+    git remote add origin THIS_ORIGIN
+    git fetch
+    git checkout -f gh-pages # force overwrite to get current state
+
+Thereafter, re-build the site to get the most recent version in the `output`
+directory` and push the branch upstream.
