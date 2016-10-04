@@ -117,3 +117,7 @@ site:
   chat:
     vast: https://gitter.im/vast-io/vast
     cpp: https://gitter.im/vast-io/cpp
+
+  google_analytics:
+    code: UA-1823891-4
+    site: auto
