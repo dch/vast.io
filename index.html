@@ -157,7 +157,7 @@
           <div class='medium4 columns'>
             <div class='callout large primary' data-equalizer-watch>
               <div class='text-center'>
-                <i class='fa fa-magic fa-4x'></i>
+                <i class='fa fa-heartbeat fa-4x'></i>
               </div>
               <p><strong>Interactive</strong>. VAST is designed to answer complex queries in
               sub-second latencies, allowing incident responders and threat
@@ -179,12 +179,12 @@
           <div class='medium4 columns'>
             <div class='callout large primary' data-equalizer-watch>
               <div class='text-center'>
-                <i class='fa fa-terminal fa-4x'></i>
+                <i class='fa fa-language fa-4x'></i>
               </div>
-              <p><strong>Expressive</strong>. VAST offers a rich type system to describe
-              your data, giving you flexible query operations (e.g., IP address
-              prefix search, set membership) and unleashing type-specific
-              internal optimizations.</p>
+              <p><strong>Expressive</strong>. To describe activity, VAST offers a rich-typed data
+              model to avoid loss of critical semantics. The type-safe query
+              language enables flexible query operations (e.g., top-k IP prefix
+              search, set membership) and type-specific performance optimizations.</p>
             </div>
           </div>
         </div>
@@ -221,10 +221,9 @@
               <h3>Documentation</h3>
               <p>Since VAST is still in a fledgling stage, we do not have technical
               documentation available at this point. Meanwhile, our <a href="http://matthias.vallentin.net/papers/nsdi16.pdf">conference
-              paper</a> offers a good introduction
-              and the corresponding
-              <a href="http://matthias.vallentin.net/papers/thesis-phd.pdf">dissertation</a> comprehensive
-              coverage about the design and implementation.</p>
+              paper</a> offers a good introduction and
+              the corresponding <a href="http://matthias.vallentin.net/papers/thesis-phd.pdf">dissertation</a>
+              comprehensive coverage about the design and implementation.</p>
             </div>
           </div>
         </div>
@@ -243,13 +242,13 @@
               <!-- Chat -->
               <div class='row'>
                 <div class='columns text-center'>
-                  <a href='https://gitter.im/vast-io/vast'>
+                  <a href=''>
                     <i class='fa fa-commenting fa-3x'></i>
                   </a>
                 </div>
                 <div class='columns medium-10'>
-                  <p><strong>Chat</strong>. We listen. If you have direct questions for the
-                  developers of VAST, join our <a href="https://gitter.im/vast-io/vast">Gitter
+                  <p><strong>Chat</strong>. We actively engage. If you have direct questions for
+                  the developers of VAST, join our <a href="">Gitter
                   chat</a>. As die-hard C++ fans,
                   we also have dedicated <a href="https://gitter.im/vast-io/cpp">C++
                   channel</a>.</p>
@@ -265,7 +264,7 @@
                 <div class='columns medium-10'>
                   <p><strong>GitHub</strong>. We share our work. VAST ships with a permissive
                   3-clause BSD license. If you have trouble with the code, please
-                  do not hesitate to file an issue at <a href="https://github.com/vast-io/vast/issues">our
+                  do not hesitate to file an issue at <a href="http://vast.fail">our
                   tracker</a>.</p>
                 </div>
               </div>
@@ -294,8 +293,8 @@
                   send an email to our <a href="[http://mailman.icsi.berkeley.edu/mailman/listinfo/vast">mailing
                   list</a>. Our commit diffs ship
                   to a <a href="http://mailman.icsi.berkeley.edu/mailman/listinfo/vast-commits">separate mailing
-                  list</a>. And if you can't
-                  find answer anywhere, you can always send an email to
+                  list</a>. If you can't find
+                  answer anywhere, you can always send an email to
                   <a href="mailto:info@vast.io">info@vast.io</a>.</p>
                 </div>
               </div>
@@ -310,20 +309,26 @@
             <h1>About</h1>
           </div>
         </div>
-        <!-- Academic Origin -->
+        <!-- Origin -->
         <div class='row align-middle'>
           <div class='columns medium-8'>
             <div class='callout large success'>
-              <h3>Academic Origin</h3>
-              <p>The abstract idea of VAST manifested in 2008 as a <a href="http://www.icir.org/mallman/pubs/AKP+08/AKP+08.pdf">research
-              paper</a> about
-              <strong>Principles for Developing Comprehensive Network Visibility</strong> by
-              <a href="http://www.icir.org/mallman">Mark Allman</a> (who coined the term
-              VAST),
-              <a href="http://www.icir.org/christian">Christian Kreibich</a>,
-              <a href="http://www.icir.org/vern">Vern Paxson</a>,
-              <a href="http://www.icir.org/robin">Robin Sommer</a>, and
-              <a href="http://www.icsi.berkeley.edu/~nweaver">Nicholas Weaver</a>.</p>
+              <h3>History</h3>
+              <p>VAST means to address a deep-running operational need of
+              large-scale network monitoring and incident response: archiving and
+              searching massive amounts of structured data interactively in an
+              expressive manner.</p>
+              
+              <p>In 2008, researchers at the <a href="http://www.icsi.berkeley.edu">International Computer Science
+              Institute (ICSI)</a> formulated
+              <a href="http://www.icir.org/mallman/pubs/AKP+08/AKP+08.pdf">Principles for Developing Comprehensive Network
+              Visibility</a>,
+              which lead to the inception of VAST as an academic feasibility study.
+              After exploring these concepts extensively in a master's thesis and
+              Ph.D. dissertation, VAST has bridged the gap from theory into
+              practice. Today, <a href="http://matthias.vallentin.net">Matthias
+              Vallentin</a> leads the development of
+              VAST in his post-doctoral appointment at UC Berkeley.</p>
             </div>
           </div>
           <div class='columns text-center'>
@@ -336,22 +341,22 @@
             <div class='callout large success'>
               <h3>Funding</h3>
               <p>The <a href="http://vcresearch.berkeley.edu/signatures/about">Signatures Innovation Fellows
-              Program</a> currently
-              funds VAST development and research. This program supports
-              innovative research from UC Berkeley faculty that hold commercial
-              promise. We are grateful for their support.</p>
+              Program</a> funds the
+              post-doctoral position that enables VAST to move forward. This
+              program supports innovative research from UC Berkeley faculty that
+              hold commercial promise. We are grateful for their support.</p>
             </div>
           </div>
           <div class='columns text-center'>
             <i class='fa fa-usd fa-5x'></i>
           </div>
         </div>
-        <!-- Academic Origin -->
+        <!-- Academic Reference -->
         <div class='row align-middle'>
           <div class='columns medium-8'>
             <div class='callout large success'>
-              <h3>Scientific Use</h3>
-              <p>If you want to cite VAST in an academic context, please cite our
+              <h3>Academic Reference</h3>
+              <p>When citing VAST in an academic context, please reference our
               <a href="http://matthias.vallentin.net/papers/nsdi16.pdf">conference paper</a> as follows:</p>
               <pre>@InProceedings{nsdi16:vast,&#x000A;  author    = {Matthias Vallentin and Vern Paxson and Robin Sommer},&#x000A;  title     = {{VAST: A Unified Platform for Interactive Network Forensics}},&#x000A;  booktitle = {Proceedings of the USENIX Symposium on Networked Systems&#x000A;               Design and Implementation (NSDI)},&#x000A;  month     = {March},&#x000A;  year      = {2016}&#x000A;}</pre>
             </div>
