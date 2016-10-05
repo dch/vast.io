@@ -10,7 +10,7 @@ title: Home
       .columns.text-center
         %h2.subheader A Scalable Platform for Network Forensics
     .row.align-center
-      .columns.medium-8
+      .columns
         .orbit(role="showcase" aria-label="VAST Highlights" data-orbit)
           %ul.orbit-container
             %button.orbit-previous
@@ -54,8 +54,8 @@ title: Home
     .row
       .columns.text-center
         %h1 Features
-    .row(data-equalizer data-equalize-on="medium")
-      .medium4.columns
+    .row.medium-unstack(data-equalizer data-equalize-on="medium")
+      .columns
         .callout.large.primary(data-equalizer-watch)
           .text-center
             %i.fa.fa-heartbeat.fa-4x
@@ -63,7 +63,7 @@ title: Home
             **Interactive**. VAST is designed to answer complex queries in
             sub-second latencies, allowing incident responders and threat
             hunters to quickly achieve their tasks with maximum productivity.
-      .medium4.columns
+      .columns
         .callout.large.primary(data-equalizer-watch)
           .text-center
             %i.fa.fa-cubes.fa-4x
@@ -73,7 +73,7 @@ title: Home
             To this end, VAST leverages the [C++ Actor
             Framework](http://www.actor-framework.org) as high-performance
             message-passing runtime.
-      .medium4.columns
+      .columns
         .callout.large.primary(data-equalizer-watch)
           .text-center
             %i.fa.fa-language.fa-4x
@@ -89,9 +89,9 @@ title: Home
         %h1 Resources
     / Download
     .row.align-middle#download
-      .columns.text-center
+      .columns.medium-4.show-for-large.text-center
         %i.fa.fa-download.fa-5x
-      .columns.medium-8
+      .columns
         .callout.large.secondary
           %h3 Download
           %p
@@ -99,9 +99,9 @@ title: Home
             scrambling hard to provide an alpha version soon. Stay tuned!
     / Documentation
     .row.align-middle#documentation
-      .columns.text-center
+      .columns.medium-4.show-for-large.text-center
         %i.fa.fa-book.fa-5x
-      .columns.medium-8
+      .columns
         .callout.large.secondary
           %h3 Documentation
           :markdown
@@ -112,9 +112,9 @@ title: Home
             comprehensive coverage about the design and implementation.
     / Community
     .row.align-middle#community
-      .columns.text-center
+      .columns.medium-4.show-for-large.text-center
         %i.fa.fa-users.fa-5x
-      .columns.medium-8
+      .columns
         .callout.large.secondary
           %h3 Community
           :markdown
@@ -124,10 +124,10 @@ title: Home
             These are the various channels to reach us:
           / Chat
           .row
-            .columns.text-center
+            .columns.medium-2.show-for-medium.text-center
               %a(href="#{@config[:vast][:chat][:vast]}")
                 %i.fa.fa-commenting.fa-3x
-            .columns.medium-10
+            .columns
               :markdown
                 **Chat**. We actively engage. If you have direct questions for
                 the developers of VAST, join our [Gitter
@@ -136,31 +136,32 @@ title: Home
                 channel](#{@config[:vast][:chat][:cpp]}).
           / GitHub
           .row
-            .columns.text-center
+            .columns.medium-2.show-for-medium.text-center
               %a(href="#{@config[:vast][:github][:project]}")
                 %i.fa.fa-github.fa-3x
-            .columns.medium-10
+            .columns
               :markdown
                 **GitHub**. We share our work. VAST ships with a permissive
-                3-clause BSD license. If you have trouble with the code, please
+                3-clause BSD license. If you have trouble with [the
+                code](#{@config[:vast][:github][:project]}), please
                 do not hesitate to file an issue at [our
                 tracker](#{@config[:vast][:tracker]}).
           / Twitter
           .row
-            .columns.text-center
+            .columns.medium-2.show-for-medium.text-center
               %a(href="#{@config[:vast][:twitter]}")
                 %i.fa.fa-twitter.fa-3x
-            .columns.medium-10
+            .columns
               :markdown
                 **Twitter**. We spread the word. You can follow
                 [@vast_io](#{@config[:vast][:twitter]}) where we will
                 periodically post noteworthy tidbits about VAST.
           / Mailing lists
           .row
-            .columns.text-center
+            .columns.medium-2.show-for-medium.text-center
               %a(href="#{@config[:vast][:email][:list]}")
                 %i.fa.fa-envelope.fa-3x
-            .columns.medium-10
+            .columns
               :markdown
                 **Mailing Lists**. We communicate.  To reach the community,
                 send an email to our [mailing
@@ -176,7 +177,7 @@ title: Home
         %h1 About
     / Origin
     .row.align-middle
-      .columns.medium-8
+      .columns
         .callout.large.success
           %h3 History
           :markdown
@@ -195,11 +196,11 @@ title: Home
             practice. Today, [Matthias
             Vallentin](http://matthias.vallentin.net) leads the development of
             VAST in his post-doctoral appointment at UC Berkeley.
-      .columns.text-center
+      .columns.medium-4.show-for-large.text-center
         %i.fa.fa-graduation-cap.fa-5x
     / Funding
     .row.align-middle
-      .columns.medium-8
+      .columns
         .callout.large.success
           %h3 Funding
           :markdown
@@ -208,11 +209,13 @@ title: Home
             post-doctoral position that enables VAST to move forward. This
             program supports innovative research from UC Berkeley faculty that
             hold commercial promise. We are grateful for their support.
-      .columns.text-center
+      .columns.medium-4.show-for-large.text-center
         %i.fa.fa-usd.fa-5x
     / Academic Reference
-    .row.align-middle
-      .columns.medium-8
+    / FIXME: Instead of hiding this row entirely, how can we make it look good
+    /        on smaller devices?
+    .row.show-for-large.align-middle
+      .columns
         .callout.large.success
           %h3 Academic Reference
           :markdown
@@ -228,7 +231,7 @@ title: Home
                 month     = {March},
                 year      = {2016}
               }
-      .columns.text-center
+      .columns.medium-4.show-for-large.text-center
         %i.fa.fa-retweet.fa-5x
 %footer
   = render '/partials/footer.*'
