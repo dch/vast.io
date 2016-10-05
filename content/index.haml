@@ -58,7 +58,7 @@ title: Home
       .medium4.columns
         .callout.large.primary(data-equalizer-watch)
           .text-center
-            %i.fa.fa-magic.fa-4x
+            %i.fa.fa-heartbeat.fa-4x
           :markdown
             **Interactive**. VAST is designed to answer complex queries in
             sub-second latencies, allowing incident responders and threat
@@ -72,16 +72,16 @@ title: Home
             machine and transparently scales to cluster of commodity machines.
             To this end, VAST leverages the [C++ Actor
             Framework](http://www.actor-framework.org) as high-performance
-            runtime.
+            message-passing runtime.
       .medium4.columns
         .callout.large.primary(data-equalizer-watch)
           .text-center
-            %i.fa.fa-terminal.fa-4x
+            %i.fa.fa-language.fa-4x
           :markdown
-            **Expressive**. VAST offers a rich type system to describe
-            your data, giving you flexible query operations (e.g., IP address
-            prefix search, set membership) and unleashing type-specific
-            internal optimizations.
+            **Expressive**. To describe activity, VAST offers a rich-typed data
+            model to avoid loss of critical semantics. The type-safe query
+            language enables flexible query operations (e.g., top-k IP prefix
+            search, set membership) and type-specific performance optimizations.
   %hr
   %section#resources
     .row
@@ -107,10 +107,9 @@ title: Home
           :markdown
             Since VAST is still in a fledgling stage, we do not have technical
             documentation available at this point. Meanwhile, our [conference
-            paper](#{@config[:site][:docs][:paper]}) offers a good introduction
-            and the corresponding
-            [dissertation](#{@config[:site][:docs][:thesis]}) comprehensive
-            coverage about the design and implementation.
+            paper](#{@config[:vast][:paper]}) offers a good introduction and
+            the corresponding [dissertation](#{@config[:vast][:thesis]})
+            comprehensive coverage about the design and implementation.
     / Community
     .row.align-middle#community
       .columns.text-center
@@ -126,70 +125,76 @@ title: Home
           / Chat
           .row
             .columns.text-center
-              %a(href="#{@config[:site][:chat][:vast]}")
+              %a(href="#{@config[:vast][:chat][:vast]}")
                 %i.fa.fa-commenting.fa-3x
             .columns.medium-10
               :markdown
-                **Chat**. We listen. If you have direct questions for the
-                developers of VAST, join our [Gitter
-                chat](#{@config[:site][:chat][:vast]}). As die-hard C++ fans,
+                **Chat**. We actively engage. If you have direct questions for
+                the developers of VAST, join our [Gitter
+                chat](#{@config[:vast][:chat][:vast]}). As die-hard C++ fans,
                 we also have dedicated [C++
-                channel](#{@config[:site][:chat][:cpp]}).
+                channel](#{@config[:vast][:chat][:cpp]}).
           / GitHub
           .row
             .columns.text-center
-              %a(href="#{@config[:site][:github][:project]}")
+              %a(href="#{@config[:vast][:github][:project]}")
                 %i.fa.fa-github.fa-3x
             .columns.medium-10
               :markdown
                 **GitHub**. We share our work. VAST ships with a permissive
                 3-clause BSD license. If you have trouble with the code, please
                 do not hesitate to file an issue at [our
-                tracker](#{@config[:site][:github][:project]}/issues).
+                tracker](#{@config[:vast][:tracker]}).
           / Twitter
           .row
             .columns.text-center
-              %a(href="#{@config[:site][:twitter]}")
+              %a(href="#{@config[:vast][:twitter]}")
                 %i.fa.fa-twitter.fa-3x
             .columns.medium-10
               :markdown
-                **Twitter**. We spread the word. Follow
-                [@vast_io](#{@config[:site][:twitter]}) where we will
+                **Twitter**. We spread the word. You can follow
+                [@vast_io](#{@config[:vast][:twitter]}) where we will
                 periodically post noteworthy tidbits about VAST.
           / Mailing lists
           .row
             .columns.text-center
-              %a(href="#{@config[:site][:email][:list]}")
+              %a(href="#{@config[:vast][:email][:list]}")
                 %i.fa.fa-envelope.fa-3x
             .columns.medium-10
               :markdown
-                **Mailing Lists**. We listen to you.  To reach the community,
+                **Mailing Lists**. We communicate.  To reach the community,
                 send an email to our [mailing
-                list]([#{@config[:site][:email][:list]}). Our commit diffs ship
+                list]([#{@config[:vast][:email][:list]}). Our commit diffs ship
                 to a [separate mailing
-                list](#{@config[:site][:email][:commits]}). And if you can't
-                find answer anywhere, you can always send an email to
-                <#{@config[:site][:email][:info]}>.
+                list](#{@config[:vast][:email][:commits]}). If you can't find
+                answer anywhere, you can always send an email to
+                <#{@config[:vast][:email][:info]}>.
   %hr
   %section#about
     .row
       .columns.text-center
         %h1 About
-    / Academic Origin
+    / Origin
     .row.align-middle
       .columns.medium-8
         .callout.large.success
-          %h3 Academic Origin
+          %h3 History
           :markdown
-            The abstract idea of VAST manifested in 2008 as a [research
-            paper](http://www.icir.org/mallman/pubs/AKP+08/AKP+08.pdf) about
-            **Principles for Developing Comprehensive Network Visibility** by
-            [Mark Allman](http://www.icir.org/mallman) (who coined the term
-            VAST),
-            [Christian Kreibich](http://www.icir.org/christian),
-            [Vern Paxson](http://www.icir.org/vern),
-            [Robin Sommer](http://www.icir.org/robin), and
-            [Nicholas Weaver](http://www.icsi.berkeley.edu/~nweaver).
+            VAST means to address a deep-running operational need of
+            large-scale network monitoring and incident response: archiving and
+            searching massive amounts of structured data interactively in an
+            expressive manner.
+
+            In 2008, researchers at the [International Computer Science
+            Institute (ICSI)](http://www.icsi.berkeley.edu) formulated
+            [Principles for Developing Comprehensive Network
+            Visibility](http://www.icir.org/mallman/pubs/AKP+08/AKP+08.pdf),
+            which lead to the inception of VAST as an academic feasibility study.
+            After exploring these concepts extensively in a master's thesis and
+            Ph.D. dissertation, VAST has bridged the gap from theory into
+            practice. Today, [Matthias
+            Vallentin](http://matthias.vallentin.net) leads the development of
+            VAST in his post-doctoral appointment at UC Berkeley.
       .columns.text-center
         %i.fa.fa-graduation-cap.fa-5x
     / Funding
@@ -199,20 +204,20 @@ title: Home
           %h3 Funding
           :markdown
             The [Signatures Innovation Fellows
-            Program](http://vcresearch.berkeley.edu/signatures/about) currently
-            funds VAST development and research. This program supports
-            innovative research from UC Berkeley faculty that hold commercial
-            promise. We are grateful for their support.
+            Program](http://vcresearch.berkeley.edu/signatures/about) funds the
+            post-doctoral position that enables VAST to move forward. This
+            program supports innovative research from UC Berkeley faculty that
+            hold commercial promise. We are grateful for their support.
       .columns.text-center
         %i.fa.fa-usd.fa-5x
-    / Academic Origin
+    / Academic Reference
     .row.align-middle
       .columns.medium-8
         .callout.large.success
-          %h3 Scientific Use
+          %h3 Academic Reference
           :markdown
-            If you want to cite VAST in an academic context, please cite our
-            [conference paper](#{@config[:site][:docs][:paper]}) as follows:
+            When citing VAST in an academic context, please reference our
+            [conference paper](#{@config[:vast][:paper]}) as follows:
           %pre
             :preserve
               @InProceedings{nsdi16:vast,

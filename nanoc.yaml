@@ -107,25 +107,29 @@ site:
   slogan: Visibility Across Space and Time
   author: Matthias Vallentin
 
+  google_analytics:
+    code: UA-1823891-4
+    site: auto
+
+# -- VAST resources -------------------------------------------------------------
+
+vast:
   email:
     list: http://mailman.icsi.berkeley.edu/mailman/listinfo/vast
     commits: http://mailman.icsi.berkeley.edu/mailman/listinfo/vast-commits
     info: info@vast.io
 
-  docs:
-    paper: http://matthias.vallentin.net/papers/nsdi16.pdf
-    thesis: http://matthias.vallentin.net/papers/thesis-phd.pdf
+  paper: http://matthias.vallentin.net/papers/nsdi16.pdf
+  thesis: http://matthias.vallentin.net/papers/thesis-phd.pdf
 
   github:
     organization: https://github.com/vast-io
     project: https://github.com/vast-io/vast
 
+  tracker: http://vast.fail
+
   twitter: https://twitter.com/vast_io
 
   chat:
-    vast: https://gitter.im/vast-io/vast
+    main: https://gitter.im/vast-io/vast
     cpp: https://gitter.im/vast-io/cpp
-
-  google_analytics:
-    code: UA-1823891-4
-    site: auto
