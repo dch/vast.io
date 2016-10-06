@@ -211,27 +211,5 @@ title: Home
             hold commercial promise. We are grateful for their support.
       .columns.medium-4.show-for-large.text-center
         %i.fa.fa-usd.fa-5x
-    / Academic Reference
-    / FIXME: Instead of hiding this row entirely, how can we make it look good
-    /        on smaller devices?
-    .row.show-for-large.align-middle
-      .columns
-        .callout.large.primary
-          %h3 Academic Reference
-          :markdown
-            When citing VAST in an academic context, please reference our
-            [conference paper](#{@config[:vast][:paper]}) as follows:
-          %pre
-            :preserve
-              @InProceedings{nsdi16:vast,
-                author    = {Matthias Vallentin and Vern Paxson and Robin Sommer},
-                title     = {{VAST: A Unified Platform for Interactive Network Forensics}},
-                booktitle = {Proceedings of the USENIX Symposium on Networked Systems
-                             Design and Implementation (NSDI)},
-                month     = {March},
-                year      = {2016}
-              }
-      .columns.medium-4.show-for-large.text-center
-        %i.fa.fa-retweet.fa-5x
 %footer
   = render '/partials/footer.*'
