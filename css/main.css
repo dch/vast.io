@@ -7607,3 +7607,16 @@ table.hover tr:nth-of-type(even):hover {
     order: 6;
   }
 }
+.callout.dynamic {
+  padding: 1rem;
+}
+@media screen and (min-width: 40em) {
+  .callout.dynamic {
+    padding: 1.25rem;
+  }
+}
+@media screen and (min-width: 64em) {
+  .callout.dynamic {
+    padding: 3.125rem;
+  }
+}
