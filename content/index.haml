@@ -20,29 +20,33 @@ title: Home
         .callout.dynamic.primary(data-equalizer-watch)
           .text-center
             %i.fa.fa-heartbeat.fa-4x
-          :markdown
-            **Interactive**. VAST is designed to answer complex queries in
-            sub-second latencies, allowing incident responders and threat
-            hunters to quickly achieve their tasks with maximum productivity.
+          .text-justify
+            :markdown
+              **Interactive**. VAST is designed to answer complex queries in
+              sub-second latencies, allowing incident responders and threat
+              hunters to quickly achieve their tasks with maximum productivity.
       .columns
         .callout.dynamic.primary(data-equalizer-watch)
           .text-center
             %i.fa.fa-cubes.fa-4x
-          :markdown
-            **Scalable**. VAST harnesses all available CPU cores in your
-            machine and transparently scales to cluster of commodity machines.
-            To this end, VAST leverages the [C++ Actor
-            Framework](http://www.actor-framework.org) as high-performance
-            message-passing runtime.
+          .text-justify
+            :markdown
+              **Scalable**. VAST harnesses all available CPU cores in your
+              machine and transparently scales to a cluster of commodity
+              machines. To this end, VAST leverages the [C++ Actor
+              Framework](http://www.actor-framework.org) as high-performance
+              message-passing runtime.
       .columns
         .callout.dynamic.primary(data-equalizer-watch)
           .text-center
             %i.fa.fa-language.fa-4x
-          :markdown
-            **Expressive**. To describe activity, VAST offers a rich-typed data
-            model to avoid loss of critical semantics. The type-safe query
-            language enables flexible query operations (e.g., top-k IP prefix
-            search, set membership) and type-specific performance optimizations.
+          .text-justify
+            :markdown
+              **Expressive**. To describe activity, VAST offers a rich-typed
+              data model to avoid loss of critical semantics. The type-safe
+              query language enables flexible query operations (e.g., top-k IP
+              prefix search, set membership) and type-specific performance
+              optimizations.
   %hr
   %section#resources
     .row
@@ -52,7 +56,7 @@ title: Home
     .row.align-middle#download
       .columns.medium-4.show-for-large.text-center
         %i.fa.fa-download.fa-5x
-      .columns
+      .columns.text-justify
         .callout.dynamic.secondary
           %h3 Download
           %p
@@ -62,7 +66,7 @@ title: Home
     .row.align-middle#documentation
       .columns.medium-4.show-for-large.text-center
         %i.fa.fa-book.fa-5x
-      .columns
+      .columns.text-justify
         .callout.dynamic.secondary
           %h3 Documentation
           :markdown
@@ -72,16 +76,16 @@ title: Home
             the corresponding [dissertation](#{@config[:vast][:thesis]})
             comprehensive coverage about the design and implementation.
     / Community
-    .row.align-middle#community
+    .row.align-middle.text-justify#community
       .columns.medium-4.show-for-large.text-center
         %i.fa.fa-users.fa-5x
       .columns
         .callout.dynamic.secondary
           %h3 Community
           :markdown
-            While we are developing VAST, we want to stay in touch with you and
-            seek an active exchange. After all, *you* will be using it and we
-            are working hard to deliver you a satisfying solution.
+            While we are developing VAST, we want to stay in touch with you
+            and seek an active exchange. After all, *you* will be using it
+            and we are working hard to deliver you a satisfying solution.
             These are the various channels to reach us:
           / Chat
           .row
@@ -137,7 +141,7 @@ title: Home
       .columns.text-center
         %h1 About
     / Origin
-    .row.align-middle
+    .row.align-middle.text-justify
       .columns
         .callout.dynamic.primary
           %h3 History
