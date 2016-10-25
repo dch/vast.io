@@ -1,6 +1,7 @@
 # vast.io
 
-This repository hosts the source code for <http://vast.io>.
+This repository hosts the source code for <http://vast.io>, subject to our
+[licensing terms](LICENSE.md).
 
 # Architecture
 
@@ -21,7 +22,7 @@ project:
    SCSS from the various frameworks bower installed in
    `content/assets/components`.
 
-3. We use [HAML](http://haml.info) to write clean and consice HTML markup.
+3. We use [HAML](http://haml.info) to write clean and concise HTML markup.
 
 The repository layout
 ```
