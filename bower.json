@@ -1,5 +1,5 @@
 {
-  "name": "VAST",
+  "name": "vast",
   "description": "Visibility Across Space and Time",
   "dependencies": {
     "fastclick": "1.0.x",
