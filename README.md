@@ -46,8 +46,8 @@ The [Rules](Rules) file describes the compilation process in detail.
 
 # Usage
 
-You need Ruby >= 2.3 to compile the site. Make sure you have bundler and bower
-installed:
+You need Ruby >= 2.3 and node JS to compile the site. (On Mac OS, `brew install
+ruby node` does the trick.) Make sure you have bundler and bower installed:
 
     gem install bundler
     npm -g install bower
