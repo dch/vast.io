@@ -97,7 +97,7 @@ checks:
 deploy:
   default:
     kind: git
-    remote: git@github.com:mavam/vast.io.git
+    remote: git@github.com:vast-io/vast.io.git
     branch: gh-pages
 
 # -- site meta data -------------------------------------------------------------
