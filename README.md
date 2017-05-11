@@ -90,6 +90,6 @@ repository in the `output` directory in branch `gh-pages`:
     git fetch
     git checkout -f gh-pages # force overwrite to get current state
 
-Thereafter, use nanoc to automatically push the site upstream:
+Thereafter, use nanoc to automatically push your changes upstream:
 
     bundle exec nanoc deploy
