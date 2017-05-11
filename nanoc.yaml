@@ -136,3 +136,7 @@ vast:
   chat:
     main: https://gitter.im/vast-io/vast
     cpp: https://gitter.im/vast-io/cpp
+
+  media:
+    ucb17: http://vcresearch.berkeley.edu/news/signatures_paxson_vallentin
+    lbl17: http://today.lbl.gov/2017/04/28/matthias-vallentin-takes-a-vast-step-forward-in-cyber-security/
