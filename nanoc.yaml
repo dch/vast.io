@@ -1,4 +1,4 @@
-# -- nanoc configuration --------------------------------------------------------
+# -- nanoc configuration -------------------------------------------------------
 
 # The syntax to use for patterns in the Rules file. Can be either `"glob"`
 # (default) or `"legacy"`. The former will enable glob patterns, which behave
@@ -70,8 +70,9 @@ checks:
   # Configuration for the “internal_links” checker, which checks whether all
   # internal links are valid.
   internal_links:
-    # A list of patterns, specified as regular expressions, to exclude from the check.
-    # If an internal link matches this pattern, the validity check will be skipped.
+    # A list of patterns, specified as regular expressions, to exclude from the
+    # check. If an internal link matches this pattern, the validity check will
+    # be skipped.
     # E.g.:
     #   exclude: ['^/server_status']
     exclude: []
@@ -79,20 +80,22 @@ checks:
   # Configuration for the “external_links” checker, which checks whether all
   # external links are valid.
   external_links:
-    # A list of patterns, specified as regular expressions, to exclude from the check.
-    # If an external link matches this pattern, the validity check will be skipped.
+    # A list of patterns, specified as regular expressions, to exclude from the
+    # check. If an external link matches this pattern, the validity check will
+    # be skipped.
     # E.g.:
     #   exclude: ['^http://example.com$']
     exclude: []
 
-    # A list of file patterns, specified as regular expressions, to exclude from the check.
-    # If a file matches this pattern, the links from this file will not be checked.
+    # A list of file patterns, specified as regular expressions, to exclude
+    # from the check. If a file matches this pattern, the links from this file
+    # will not be checked.
     # E.g.:
     #   exclude_files: ['blog/page']
     exclude_files: []
 
 
-# -- deploying ------------------------------------------------------------------
+# -- deploying -----------------------------------------------------------------
 
 deploy:
   default:
@@ -100,7 +103,7 @@ deploy:
     remote: git@github.com:vast-io/vast.io.git
     branch: gh-pages
 
-# -- site meta data -------------------------------------------------------------
+# -- site meta data ------------------------------------------------------------
 
 site:
   name: VAST
@@ -111,7 +114,7 @@ site:
     code: UA-1823891-4
     site: auto
 
-# -- VAST resources -------------------------------------------------------------
+# -- VAST resources ------------------------------------------------------------
 
 vast:
   email:
