@@ -1,340 +1,350 @@
 <!DOCTYPE html>
 <html class='no-js' lang='en'>
-  <head>
-    <meta charset='utf-8'>
-    <meta content='IE=edge' http-equiv='X-UA-Compatible'>
-    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
-    <meta content='Nanoc 4.3.4' name='generator'>
-    <title>
-      VAST - Home
-    </title>
-    <link href='/css/main.css' rel='stylesheet'>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <div class='title-bar' data-hide-for='medium' data-responsive-toggle='main-menu'>
-          <button class='menu-icon' data-toggle type='button'></button>
-          <div class='title-bar-title'>
-            Menu
-          </div>
-        </div>
-        <div class='top-bar' id='main-menu'>
-          <div class='top-bar-title show-for-medium'>
-            <img alt='Logo' src='images/logo.png'>
-          </div>
-          <div class='top-bar-left'>
-            <ul class='dropdown menu' data-dropdown-menu>
-              <li>
-                <a href='#'>Home</a>
-              </li>
-              <li>
-                <a href='#features'>Features</a>
-              </li>
-              <li>
-                <a href='#resources'>Resources</a>
-                <ul class='menu vertical'>
-                  <li>
-                    <a href='#download'>
-                      <i class='fa fa-download'></i>
-                      Download
-                    </a>
-                  </li>
-                  <li>
-                    <a href='#documentation'>
-                      <i class='fa fa-book'></i>
-                      Documentation
-                    </a>
-                  </li>
-                  <li>
-                    <a href='#community'>
-                      <i class='fa fa-users'></i>
-                      Community
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href='#about'>About</a>
-              </li>
-            </ul>
-          </div>
-          <div class='top-bar-right'>
-            <ul class='menu align-right'>
-              <li>
-                <input placeholder='Search' type='search'>
-              </li>
-              <li>
-                <button class='button' type='button'>
-                  <i class='fa fa-search'></i>
-                </button>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <main role='main'>
-      <section id='spotlight'>
-        <div class='row'>
-          <div class='columns text-center'>
-            <h2 class='subheader'>A Scalable Platform for Network Forensics</h2>
-          </div>
-        </div>
-      </section>
-      <section id='features'>
-        <div class='row'>
-          <div class='columns text-center'>
-            <h1>Features</h1>
-          </div>
-        </div>
-        <div class='row medium-unstack' data-equalize-on='medium' data-equalizer>
-          <div class='columns'>
-            <div class='callout dynamic primary' data-equalizer-watch>
-              <div class='text-center'>
-                <i class='fa fa-heartbeat fa-4x'></i>
-              </div>
-              <div class='text-justify'>
-                <p><strong>Interactive</strong>. VAST is designed to answer complex queries in
-                sub-second latencies, allowing incident responders and threat
-                hunters to quickly achieve their tasks with maximum productivity.</p>
-              </div>
-            </div>
-          </div>
-          <div class='columns'>
-            <div class='callout dynamic primary' data-equalizer-watch>
-              <div class='text-center'>
-                <i class='fa fa-cubes fa-4x'></i>
-              </div>
-              <div class='text-justify'>
-                <p><strong>Scalable</strong>. VAST harnesses all available CPU cores in your
-                machine and transparently scales to a cluster of commodity
-                machines. To this end, VAST leverages the <a href="http://www.actor-framework.org">C++ Actor
-                Framework</a> as high-performance
-                message-passing runtime.</p>
-              </div>
-            </div>
-          </div>
-          <div class='columns'>
-            <div class='callout dynamic primary' data-equalizer-watch>
-              <div class='text-center'>
-                <i class='fa fa-language fa-4x'></i>
-              </div>
-              <div class='text-justify'>
-                <p><strong>Expressive</strong>. To describe activity, VAST offers a rich-typed
-                data model to avoid loss of critical semantics. The type-safe
-                query language enables flexible query operations (e.g., top-k IP
-                prefix search, set membership) and type-specific performance
-                optimizations.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <hr>
-      <section id='resources'>
-        <div class='row'>
-          <div class='columns text-center'>
-            <h1>Resources</h1>
-          </div>
-        </div>
-        <!-- Download -->
-        <div class='row align-middle' id='download'>
-          <div class='columns medium-4 show-for-large text-center'>
-            <i class='fa fa-download fa-5x'></i>
-          </div>
-          <div class='columns text-justify'>
-            <div class='callout dynamic secondary'>
-              <h3>Download</h3>
-              <p>
-                Unfortunately we don't have an official release yet, but we are
-                scrambling hard to provide an alpha version soon. Stay tuned!
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- Documentation -->
-        <div class='row align-middle' id='documentation'>
-          <div class='columns medium-4 show-for-large text-center'>
-            <i class='fa fa-book fa-5x'></i>
-          </div>
-          <div class='columns text-justify'>
-            <div class='callout dynamic secondary'>
-              <h3>Documentation</h3>
-              <p>Since VAST is still in a fledgling stage, we do not have technical
-              documentation available at this point. Meanwhile, our <a href="http://matthias.vallentin.net/papers/nsdi16.pdf">conference
-              paper</a> offers a good introduction and
-              the corresponding <a href="http://matthias.vallentin.net/papers/thesis-phd.pdf">dissertation</a>
-              comprehensive coverage about the design and implementation.</p>
-            </div>
-          </div>
-        </div>
-        <!-- Community -->
-        <div class='row align-middle text-justify' id='community'>
-          <div class='columns medium-4 show-for-large text-center'>
-            <i class='fa fa-users fa-5x'></i>
-          </div>
-          <div class='columns'>
-            <div class='callout dynamic secondary'>
-              <h3>Community</h3>
-              <p>While we are developing VAST, we want to stay in touch with you
-              and seek an active exchange. After all, <em>you</em> will be using it
-              and we are working hard to deliver you a satisfying solution.
-              These are the various channels to reach us:</p>
-              <!-- Chat -->
-              <div class='row'>
-                <div class='columns medium-2 show-for-medium text-center'>
-                  <a href='https://gitter.im/vast-io/vast'>
-                    <i class='fa fa-commenting fa-3x'></i>
-                  </a>
-                </div>
-                <div class='columns'>
-                  <p><strong>Chat</strong>. We actively engage. If you have direct questions for
-                  the developers of VAST, join our <a href="https://gitter.im/vast-io/vast">Gitter
-                  chat</a>.</p>
-                </div>
-              </div>
-              <!-- GitHub -->
-              <div class='row'>
-                <div class='columns medium-2 show-for-medium text-center'>
-                  <a href='https://github.com/vast-io/vast'>
-                    <i class='fa fa-github fa-3x'></i>
-                  </a>
-                </div>
-                <div class='columns'>
-                  <p><strong>GitHub</strong>. We share our work. VAST ships with a permissive
-                  3-clause BSD license. If you have trouble with <a href="https://github.com/vast-io/vast">the
-                  code</a>, please
-                  do not hesitate to file an issue at <a href="http://vast.fail">our
-                  tracker</a>.</p>
-                </div>
-              </div>
-              <!-- Twitter -->
-              <div class='row'>
-                <div class='columns medium-2 show-for-medium text-center'>
-                  <a href='https://twitter.com/vast_io'>
-                    <i class='fa fa-twitter fa-3x'></i>
-                  </a>
-                </div>
-                <div class='columns'>
-                  <p><strong>Twitter</strong>. We spread the word. You can follow
-                  <a href="https://twitter.com/vast_io">@vast_io</a> where we will
-                  periodically post noteworthy tidbits about VAST.</p>
-                </div>
-              </div>
-              <!-- Mailing lists -->
-              <div class='row'>
-                <div class='columns medium-2 show-for-medium text-center'>
-                  <a href='http://mailman.icsi.berkeley.edu/mailman/listinfo/vast'>
-                    <i class='fa fa-envelope fa-3x'></i>
-                  </a>
-                </div>
-                <div class='columns'>
-                  <p><strong>Mailing Lists</strong>. We communicate.  To reach the community,
-                  send an email to our <a href="[http://mailman.icsi.berkeley.edu/mailman/listinfo/vast">mailing
-                  list</a>. Our commit diffs ship
-                  to a <a href="http://mailman.icsi.berkeley.edu/mailman/listinfo/vast-commits">separate mailing
-                  list</a>. If you can't find
-                  answer anywhere, you can always send an email to
-                  <a href="mailto:info@vast.io">info@vast.io</a>.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <hr>
-      <section id='about'>
-        <div class='row'>
-          <div class='columns text-center'>
-            <h1>About</h1>
-          </div>
-        </div>
-        <!-- Origin -->
-        <div class='row align-middle text-justify'>
-          <div class='columns'>
-            <div class='callout dynamic primary'>
-              <h3>History</h3>
-              <p>VAST means to address a deep-running operational need of
-              large-scale network monitoring and incident response: archiving and
-              searching massive amounts of structured data interactively in an
-              expressive manner.</p>
-              
-              <p>In 2008, researchers at the <a href="http://www.icsi.berkeley.edu">International Computer Science
-              Institute (ICSI)</a> formulated
-              <a href="http://www.icir.org/mallman/pubs/AKP+08/AKP+08.pdf">Principles for Developing Comprehensive Network
-              Visibility</a>,
-              which lead to the inception of VAST as an academic feasibility study.
-              After exploring these concepts extensively in a master's thesis and
-              Ph.D. dissertation, VAST has bridged the gap from theory into
-              practice. Today, <a href="http://matthias.vallentin.net">Matthias
-              Vallentin</a> leads the development of
-              VAST in his <a href="http://vcresearch.berkeley.edu/news/signatures_paxson_vallentin">post-doctoral appointment at UC
-              Berkeley</a>.</p>
-            </div>
-          </div>
-          <div class='columns medium-4 show-for-large text-center'>
-            <i class='fa fa-graduation-cap fa-5x'></i>
-          </div>
-        </div>
-        <!-- Funding -->
-        <div class='row align-middle'>
-          <div class='columns'>
-            <div class='callout dynamic primary'>
-              <h3>Funding</h3>
-              <p>The <a href="http://vcresearch.berkeley.edu/signatures/about">Signatures Innovation Fellows
-              Program</a> supports
-              the post-doctoral position that enables VAST to move forward. This
-              program supports innovative research from UC Berkeley faculty that
-              hold commercial promise. We are grateful for their support.</p>
-            </div>
-          </div>
-          <div class='columns medium-4 show-for-large text-center'>
-            <i class='fa fa-usd fa-5x'></i>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <hr>
-      <div class='row'>
-        <div class='columns text-center'>
-          <p>
-            <i class='fa fa-copyright'></i>
-            2017
-            Matthias Vallentin
-          </p>
-        </div>
-      </div>
-      <div class='row'>
-        <div class='columns text-center'>
-          <p>
-            <a href='https://gitter.im/vast-io/vast'>
-              <i class='fa fa-commenting'></i>
-            </a>
-            <a href='https://github.com/vast-io'>
-              <i class='fa fa-github'></i>
-            </a>
-            <a href='https://twitter.com/vast_io'>
-              <i class='fa fa-twitter'></i>
-            </a>
-            <a href='mailto:info@vast.io'>
-              <i class='fa fa-envelope'></i>
-            </a>
-          </p>
-        </div>
-      </div>
-    </footer>
-    <script src='/js/all.js'></script>
-    <!-- Google Analytics -->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      
-      ga('create', 'UA-1823891-4', 'auto');
-      ga('send', 'pageview');
-    </script>
-  </body>
+<head>
+<meta charset='utf-8'>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+<meta content='Nanoc 4.8.19' name='generator'>
+<title>
+VAST - Home
+</title>
+<link href='/css/main.css' rel='stylesheet'>
+</head>
+<body>
+<header>
+<nav>
+<div class='title-bar' data-hide-for='medium' data-responsive-toggle='main-menu'>
+<button class='menu-icon' data-toggle type='button'></button>
+<div class='title-bar-title'>
+Menu
+</div>
+</div>
+<div class='top-bar' id='main-menu'>
+<div class='top-bar-title show-for-medium'>
+<img alt='Logo' src='images/logo.png'>
+</div>
+<div class='top-bar-left'>
+<ul class='dropdown menu' data-dropdown-menu>
+<li>
+<a href='#'>Home</a>
+</li>
+<li>
+<a href='#features'>Features</a>
+</li>
+<li>
+<a href='#resources'>Resources</a>
+<ul class='menu vertical'>
+<li>
+<a href='#download'>
+<i class='fa fa-download'></i>
+Download
+</a>
+</li>
+<li>
+<a href='#documentation'>
+<i class='fa fa-book'></i>
+Documentation
+</a>
+</li>
+<li>
+<a href='#community'>
+<i class='fa fa-users'></i>
+Community
+</a>
+</li>
+</ul>
+</li>
+<li>
+<a href='#about'>About</a>
+</li>
+</ul>
+</div>
+<div class='top-bar-right'>
+<ul class='menu align-right'>
+<li>
+<input placeholder='Search' type='search'>
+</li>
+<li>
+<button class='button' type='button'>
+<i class='fa fa-search'></i>
+</button>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+
+</header>
+<main role='main'>
+<section id='spotlight'>
+<div class='row'>
+<div class='columns text-center'>
+<h2 class='subheader'>A Scalable Platform for Network Forensics</h2>
+</div>
+</div>
+</section>
+<section id='features'>
+<div class='row'>
+<div class='columns text-center'>
+<h1>Features</h1>
+</div>
+</div>
+<div class='row medium-unstack' data-equalize-on='medium' data-equalizer>
+<div class='columns'>
+<div class='callout dynamic primary' data-equalizer-watch>
+<div class='text-center'>
+<i class='fa fa-heartbeat fa-4x'></i>
+</div>
+<div class='text-justify'>
+<p><strong>Interactive</strong>. VAST is designed to answer complex queries in
+sub-second latencies, allowing incident responders and threat
+hunters to quickly achieve their tasks with maximum productivity.</p>
+</div>
+</div>
+</div>
+<div class='columns'>
+<div class='callout dynamic primary' data-equalizer-watch>
+<div class='text-center'>
+<i class='fa fa-cubes fa-4x'></i>
+</div>
+<div class='text-justify'>
+<p><strong>Scalable</strong>. VAST harnesses all available CPU cores in your
+machine and transparently scales to a cluster of commodity
+machines. To this end, VAST leverages the <a href="http://www.actor-framework.org">C++ Actor
+Framework</a> as high-performance
+message-passing runtime.</p>
+</div>
+</div>
+</div>
+<div class='columns'>
+<div class='callout dynamic primary' data-equalizer-watch>
+<div class='text-center'>
+<i class='fa fa-language fa-4x'></i>
+</div>
+<div class='text-justify'>
+<p><strong>Expressive</strong>. To describe activity, VAST offers a rich-typed
+data model to avoid loss of critical semantics. The type-safe
+query language enables flexible query operations (e.g., top-k IP
+prefix search, set membership) and type-specific performance
+optimizations.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<hr>
+<section id='resources'>
+<div class='row'>
+<div class='columns text-center'>
+<h1>Resources</h1>
+</div>
+</div>
+<!-- Download -->
+<div class='row align-middle' id='download'>
+<div class='columns medium-4 show-for-large text-center'>
+<i class='fa fa-download fa-5x'></i>
+</div>
+<div class='columns text-justify'>
+<div class='callout dynamic secondary'>
+<h3>Download</h3>
+<p>
+Unfortunately we don't have an official release yet, but we are
+scrambling hard to provide an alpha version soon. Stay tuned!
+</p>
+</div>
+</div>
+</div>
+<!-- Documentation -->
+<div class='row align-middle' id='documentation'>
+<div class='columns medium-4 show-for-large text-center'>
+<i class='fa fa-book fa-5x'></i>
+</div>
+<div class='columns text-justify'>
+<div class='callout dynamic secondary'>
+<h3>Documentation</h3>
+<p>Since VAST is still in a fledgling stage, we do not have technical
+documentation available at this point. Meanwhile, our <a href="http://matthias.vallentin.net/papers/nsdi16.pdf">conference
+paper</a> offers a good introduction and
+the corresponding <a href="http://matthias.vallentin.net/papers/thesis-phd.pdf">dissertation</a>
+comprehensive coverage about the design and implementation.</p>
+
+</div>
+</div>
+</div>
+<!-- Community -->
+<div class='row align-middle text-justify' id='community'>
+<div class='columns medium-4 show-for-large text-center'>
+<i class='fa fa-users fa-5x'></i>
+</div>
+<div class='columns'>
+<div class='callout dynamic secondary'>
+<h3>Community</h3>
+<p>While we are developing VAST, we want to stay in touch with you
+and seek an active exchange. After all, <em>you</em> will be using it
+and we are working hard to deliver you a satisfying solution.
+These are the various channels to reach us:</p>
+<!-- Chat -->
+<div class='row'>
+<div class='columns medium-2 show-for-medium text-center'>
+<a href='https://gitter.im/vast-io/vast'>
+<i class='fa fa-commenting fa-3x'></i>
+</a>
+</div>
+<div class='columns'>
+<p><strong>Chat</strong>. We actively engage. If you have direct questions for
+the developers of VAST, join our <a href="https://gitter.im/vast-io/vast">Gitter
+chat</a>.</p>
+
+</div>
+</div>
+<!-- GitHub -->
+<div class='row'>
+<div class='columns medium-2 show-for-medium text-center'>
+<a href='https://github.com/vast-io/vast'>
+<i class='fa fa-github fa-3x'></i>
+</a>
+</div>
+<div class='columns'>
+<p><strong>GitHub</strong>. We share our work. VAST ships with a permissive
+3-clause BSD license. If you have trouble with <a href="https://github.com/vast-io/vast">the
+code</a>, please
+do not hesitate to file an issue at <a href="http://vast.fail">our
+tracker</a>.</p>
+
+</div>
+</div>
+<!-- Twitter -->
+<div class='row'>
+<div class='columns medium-2 show-for-medium text-center'>
+<a href='https://twitter.com/vast_io'>
+<i class='fa fa-twitter fa-3x'></i>
+</a>
+</div>
+<div class='columns'>
+<p><strong>Twitter</strong>. We spread the word. You can follow
+<a href="https://twitter.com/vast_io">@vast_io</a> where we will
+periodically post noteworthy tidbits about VAST.</p>
+
+</div>
+</div>
+<!-- Mailing lists -->
+<div class='row'>
+<div class='columns medium-2 show-for-medium text-center'>
+<a href='http://mailman.icsi.berkeley.edu/mailman/listinfo/vast'>
+<i class='fa fa-envelope fa-3x'></i>
+</a>
+</div>
+<div class='columns'>
+<p><strong>Mailing Lists</strong>. We communicate.  To reach the community,
+send an email to our <a href="[http://mailman.icsi.berkeley.edu/mailman/listinfo/vast">mailing
+list</a>. Our commit diffs ship
+to a <a href="http://mailman.icsi.berkeley.edu/mailman/listinfo/vast-commits">separate mailing
+list</a>. If you can't find
+answer anywhere, you can always send an email to
+<a href="mailto:info@vast.io">info@vast.io</a>.</p>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<hr>
+<section id='about'>
+<div class='row'>
+<div class='columns text-center'>
+<h1>About</h1>
+</div>
+</div>
+<!-- Origin -->
+<div class='row align-middle text-justify'>
+<div class='columns'>
+<div class='callout dynamic primary'>
+<h3>History</h3>
+<p>VAST means to address a deep-running operational need of
+large-scale network monitoring and incident response: archiving and
+searching massive amounts of structured data interactively in an
+expressive manner.</p>
+
+<p>In 2008, researchers at the <a href="http://www.icsi.berkeley.edu">International Computer Science
+Institute (ICSI)</a> formulated
+<a href="http://www.icir.org/mallman/pubs/AKP+08/AKP+08.pdf">Principles for Developing Comprehensive Network
+Visibility</a>,
+which lead to the inception of VAST as an academic feasibility study.
+After exploring these concepts extensively in a master's thesis and
+Ph.D. dissertation, VAST has bridged the gap from theory into
+practice. Today, <a href="http://matthias.vallentin.net">Matthias
+Vallentin</a> leads the development of
+VAST in his <a href="http://vcresearch.berkeley.edu/news/signatures_paxson_vallentin">post-doctoral appointment at UC
+Berkeley</a>.</p>
+
+</div>
+</div>
+<div class='columns medium-4 show-for-large text-center'>
+<i class='fa fa-graduation-cap fa-5x'></i>
+</div>
+</div>
+<!-- Funding -->
+<div class='row align-middle'>
+<div class='columns'>
+<div class='callout dynamic primary'>
+<h3>Funding</h3>
+<p>The <a href="http://vcresearch.berkeley.edu/signatures/about">Signatures Innovation Fellows
+Program</a> supports
+the post-doctoral position that enables VAST to move forward. This
+program supports innovative research from UC Berkeley faculty that
+hold commercial promise. We are grateful for their support.</p>
+</div>
+</div>
+<div class='columns medium-4 show-for-large text-center'>
+<i class='fa fa-usd fa-5x'></i>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<hr>
+<div class='row'>
+<div class='columns text-center'>
+<p>
+<i class='fa fa-copyright'></i>
+2018
+Matthias Vallentin
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='columns text-center'>
+<p>
+<a href='https://gitter.im/vast-io/vast'>
+<i class='fa fa-commenting'></i>
+</a>
+<a href='https://github.com/vast-io'>
+<i class='fa fa-github'></i>
+</a>
+<a href='https://twitter.com/vast_io'>
+<i class='fa fa-twitter'></i>
+</a>
+<a href='mailto:info@vast.io'>
+<i class='fa fa-envelope'></i>
+</a>
+</p>
+</div>
+</div>
+
+</footer>
+
+<script src='/js/all.js'></script>
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-1823891-4', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</body>
 </html>
